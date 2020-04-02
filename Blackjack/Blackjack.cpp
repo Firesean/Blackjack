@@ -35,7 +35,8 @@ int main()
         cout << card.getValueStr() << " of " << card.getSuit() << endl;
     };
     cout << deck.size() << endl;
-    card = Card(Values(3), Suits(2));
+    card = Card(Values(12), Suits(2));
+    cout << card.getValue() << endl;
     cout << card.getValueStr() << " of " << card.getSuit() << endl;
 };
 

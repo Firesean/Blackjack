@@ -4,6 +4,3 @@ class Deck
 {
 	vector<Card> Cards;
 };
-
-
-
