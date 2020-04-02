@@ -21,13 +21,21 @@ Blackjack::Blackjack() {
 
 
 
-
-
-
-
 int main()
 {
-    Card card = Card(Values(3), Suits(2));
+    vector <Card> deck = {};
+    Card card;
+    for (int suit = CLUBS; suit != SPADES+1; suit++) {
+        for (int value = ACE; value != KING+1; value++) {
+            card = Card(Values(value), Suits(suit));
+            deck.push_back(card);
+        };
+    };
+    for (auto card : deck) {
+        cout << card.getValueStr() << " of " << card.getSuit() << endl;
+    };
+    cout << deck.size() << endl;
+    card = Card(Values(3), Suits(2));
     cout << card.getValueStr() << " of " << card.getSuit() << endl;
 };
 
