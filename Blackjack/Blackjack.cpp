@@ -12,33 +12,33 @@ using namespace std;
 
 class Blackjack
 {
-    Blackjack();
-    Deck deck;
+    private:
+        Deck deck;
+
+    public:
+        Blackjack() {  // Default Construtor
+            this->deck = Deck();
+        };
+
+        Blackjack(Deck deck) {  // Arguement Contructor
+            this->deck = deck;
+        };
 };
 
-Blackjack::Blackjack() {
-};
 
 
 
 int main()
 {
-    vector <Card> deck = {};
     Card card;
-    for (int suit = CLUBS; suit != SPADES+1; suit++) {
-        for (int value = ACE; value != KING+1; value++) {
-            card = Card(Values(value), Suits(suit));
-            deck.push_back(card);
-        };
-    };
-    for (auto card : deck) {
-        cout << card.getValueStr() << " of " << card.getSuit() << endl;
-    };
-    cout << deck.size() << endl;
-    card = Card(Values(12), Suits(2));
-    cout << card.getValue() << endl;
-    cout << card.getValueStr() << " of " << card.getSuit() << endl;
+    Deck deck = Deck();
+    deck.generateDeck();
+    for (auto card : deck.getCards()){
+        cout << card.getCardName() << endl;
+    }
+    cout << deck.getSize() << endl;
 };
+
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

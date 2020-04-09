@@ -22,6 +22,13 @@ class Card
             this->suit = suit;
         };
 
+        string getCardName() {
+            string cardName = this->getValueStr() + " of " + this->getSuit();
+            return cardName;
+        };
+
+
+
         string getSuit() {
             switch (this->suit) {
             case Suits::CLUBS:
