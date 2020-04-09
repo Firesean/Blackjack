@@ -2,9 +2,12 @@
 #include "Card.h"
 class Deck
 {
-	public:
+
+	private:
 		vector<Card> cards;
 
+	public:
+	
 		void generateDeck() {
 			this->cards = {};
 			Card card;
