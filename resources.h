@@ -1,0 +1,11 @@
+// Control Codes
+#define HELPMENU 100
+#define HIGHSCOREMENU 101
+#define EXITMENU 102
+#define BACKTOMENU 103
+#define PLAYGAME 104
+#define BETBUTTON 105
+#define HITBUTTON 106
+#define DDBUTTON 107
+#define STAYBUTTON 108
+#define EXITHELP 109
